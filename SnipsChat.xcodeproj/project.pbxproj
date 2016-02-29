@@ -15,6 +15,12 @@
 		7334B0541C81589F008FD097 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7334B0521C81589F008FD097 /* LaunchScreen.storyboard */; };
 		7334B05F1C8158A0008FD097 /* SnipsChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7334B05E1C8158A0008FD097 /* SnipsChatTests.m */; };
 		7334B06A1C8158A0008FD097 /* SnipsChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7334B0691C8158A0008FD097 /* SnipsChatUITests.m */; };
+		7334B07A1C8159AC008FD097 /* SCChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7334B0791C8159AC008FD097 /* SCChatMessage.m */; settings = {ASSET_TAGS = (); }; };
+		7334B07D1C816CF9008FD097 /* SCChatMessage+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 7334B07C1C816CF9008FD097 /* SCChatMessage+Private.m */; settings = {ASSET_TAGS = (); }; };
+		7334B0801C819106008FD097 /* SCChatMessageParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7334B07F1C819106008FD097 /* SCChatMessageParser.m */; settings = {ASSET_TAGS = (); }; };
+		7334B0831C819890008FD097 /* SCNetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7334B0821C819890008FD097 /* SCNetworkOperation.m */; settings = {ASSET_TAGS = (); }; };
+		7334B0871C81CB00008FD097 /* AXHTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7334B0861C81CB00008FD097 /* AXHTMLParser.m */; settings = {ASSET_TAGS = (); }; };
+		7334B08B1C81CC59008FD097 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7334B08A1C81CC59008FD097 /* libxml2.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,17 @@
 		7334B0651C8158A0008FD097 /* SnipsChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnipsChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7334B0691C8158A0008FD097 /* SnipsChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnipsChatUITests.m; sourceTree = "<group>"; };
 		7334B06B1C8158A0008FD097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7334B0781C8159AC008FD097 /* SCChatMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCChatMessage.h; path = ChatMessages/SCChatMessage.h; sourceTree = "<group>"; };
+		7334B0791C8159AC008FD097 /* SCChatMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCChatMessage.m; path = ChatMessages/SCChatMessage.m; sourceTree = "<group>"; };
+		7334B07B1C816CF9008FD097 /* SCChatMessage+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SCChatMessage+Private.h"; path = "ChatMessages/SCChatMessage+Private.h"; sourceTree = "<group>"; };
+		7334B07C1C816CF9008FD097 /* SCChatMessage+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SCChatMessage+Private.m"; path = "ChatMessages/SCChatMessage+Private.m"; sourceTree = "<group>"; };
+		7334B07E1C819106008FD097 /* SCChatMessageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCChatMessageParser.h; path = ChatMessages/SCChatMessageParser.h; sourceTree = "<group>"; };
+		7334B07F1C819106008FD097 /* SCChatMessageParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCChatMessageParser.m; path = ChatMessages/SCChatMessageParser.m; sourceTree = "<group>"; };
+		7334B0811C819890008FD097 /* SCNetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCNetworkOperation.h; path = ChatMessages/SCNetworkOperation.h; sourceTree = "<group>"; };
+		7334B0821C819890008FD097 /* SCNetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCNetworkOperation.m; path = ChatMessages/SCNetworkOperation.m; sourceTree = "<group>"; };
+		7334B0851C81CB00008FD097 /* AXHTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AXHTMLParser.h; path = ThirdParty/AXHTMLParser.h; sourceTree = "<group>"; };
+		7334B0861C81CB00008FD097 /* AXHTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AXHTMLParser.m; path = ThirdParty/AXHTMLParser.m; sourceTree = "<group>"; };
+		7334B08A1C81CC59008FD097 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7334B08B1C81CC59008FD097 /* libxml2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +99,7 @@
 		7334B0381C81589F008FD097 = {
 			isa = PBXGroup;
 			children = (
+				7334B08A1C81CC59008FD097 /* libxml2.tbd */,
 				7334B0431C81589F008FD097 /* SnipsChat */,
 				7334B05D1C8158A0008FD097 /* SnipsChatTests */,
 				7334B0681C8158A0008FD097 /* SnipsChatUITests */,
@@ -101,6 +120,8 @@
 		7334B0431C81589F008FD097 /* SnipsChat */ = {
 			isa = PBXGroup;
 			children = (
+				7334B0841C81CAB4008FD097 /* HTMLParser */,
+				7334B0771C815913008FD097 /* ChatMessage */,
 				7334B0471C81589F008FD097 /* AppDelegate.h */,
 				7334B0481C81589F008FD097 /* AppDelegate.m */,
 				7334B04A1C81589F008FD097 /* ViewController.h */,
@@ -138,6 +159,30 @@
 				7334B06B1C8158A0008FD097 /* Info.plist */,
 			);
 			path = SnipsChatUITests;
+			sourceTree = "<group>";
+		};
+		7334B0771C815913008FD097 /* ChatMessage */ = {
+			isa = PBXGroup;
+			children = (
+				7334B0781C8159AC008FD097 /* SCChatMessage.h */,
+				7334B07E1C819106008FD097 /* SCChatMessageParser.h */,
+				7334B07F1C819106008FD097 /* SCChatMessageParser.m */,
+				7334B0811C819890008FD097 /* SCNetworkOperation.h */,
+				7334B0821C819890008FD097 /* SCNetworkOperation.m */,
+				7334B0791C8159AC008FD097 /* SCChatMessage.m */,
+				7334B07B1C816CF9008FD097 /* SCChatMessage+Private.h */,
+				7334B07C1C816CF9008FD097 /* SCChatMessage+Private.m */,
+			);
+			name = ChatMessage;
+			sourceTree = "<group>";
+		};
+		7334B0841C81CAB4008FD097 /* HTMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				7334B0851C81CB00008FD097 /* AXHTMLParser.h */,
+				7334B0861C81CB00008FD097 /* AXHTMLParser.m */,
+			);
+			name = HTMLParser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,7 +316,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7334B04C1C81589F008FD097 /* ViewController.m in Sources */,
+				7334B07D1C816CF9008FD097 /* SCChatMessage+Private.m in Sources */,
+				7334B07A1C8159AC008FD097 /* SCChatMessage.m in Sources */,
 				7334B0491C81589F008FD097 /* AppDelegate.m in Sources */,
+				7334B0871C81CB00008FD097 /* AXHTMLParser.m in Sources */,
+				7334B0801C819106008FD097 /* SCChatMessageParser.m in Sources */,
+				7334B0831C819890008FD097 /* SCNetworkOperation.m in Sources */,
 				7334B0461C81589F008FD097 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +463,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = SnipsChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snipschat.SnipsChat;
@@ -424,6 +475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = SnipsChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snipschat.SnipsChat;

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SCChatMessageParser.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[SCChatMessageParser sharedParser] parse:@"aaaaaa" AndCallBlock:^(SCChatMessage * message,BOOL finished){
+        ;
+    }];
     return YES;
 }
 
