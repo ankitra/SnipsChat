@@ -21,20 +21,33 @@
 }
 
 
-//No more loading is pending on this message
-@property (readonly) BOOL finished;
+/**
+ No more loading is pending on this message
+*/
+ @property (readonly) BOOL finished;
 
-//Array of strings having emoticons
-@property (readonly) NSArray * emoticons;
+/**
+ Array of strings having emoticons
+*/
+ @property (readonly) NSArray * emoticons;
 
-//Array of strings showing mentions
-@property (readonly) NSArray * mentions;
+/**
+ Array of strings showing mentions
+*/
+ @property (readonly) NSArray * mentions;
 
-//Array of dictionaries having links. keys are
-//kSCLinkKey -> link
-//kSCTitleKey -> NSString title or NSError if error in getting title
-@property (readonly) NSArray * links;
+/**
+ Array of dictionaries having links. keys are
+ kSCLinkKey -> link
+ kSCTitleKey -> NSString title or NSError if error in getting title
+*/
+ @property (readonly) NSArray * links;
 
+
+/**
+ Pretty printed JSON representation of the message
+ */
 -(NSString *) jsonString;
+
 
 @end

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="124" id="elY-cP-IqK" customClass="SCTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="378" height="124"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="elY-cP-IqK" id="Maf-2g-ltK">
+                <rect key="frame" x="0.0" y="0.0" width="378" height="123"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kl1-at-DmY">
+                        <rect key="frame" x="61" y="8" width="240" height="107"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="cr4-MD-gWX">
+                        <rect key="frame" x="171" y="52" width="20" height="20"/>
+                    </activityIndicatorView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="kl1-at-DmY" firstAttribute="leading" secondItem="Maf-2g-ltK" secondAttribute="leadingMargin" constant="2" id="EEE-Ee-AHX"/>
+                    <constraint firstItem="kl1-at-DmY" firstAttribute="bottom" secondItem="Maf-2g-ltK" secondAttribute="bottomMargin" constant="2" id="XPm-Pv-b42"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="kl1-at-DmY" secondAttribute="trailing" constant="2" id="abJ-mH-T94"/>
+                    <constraint firstItem="kl1-at-DmY" firstAttribute="top" secondItem="Maf-2g-ltK" secondAttribute="topMargin" constant="2" id="g3F-oE-Ob1"/>
+                    <constraint firstItem="cr4-MD-gWX" firstAttribute="centerY" secondItem="Maf-2g-ltK" secondAttribute="centerY" id="lWn-1K-IO6"/>
+                    <constraint firstItem="cr4-MD-gWX" firstAttribute="centerX" secondItem="Maf-2g-ltK" secondAttribute="centerX" id="lcJ-98-Cin"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="jsonView" destination="kl1-at-DmY" id="czI-XZ-qFI"/>
+                <outlet property="progress" destination="cr4-MD-gWX" id="BZ9-L6-X6g"/>
+            </connections>
+            <point key="canvasLocation" x="383" y="399"/>
+        </tableViewCell>
+    </objects>
+</document>
