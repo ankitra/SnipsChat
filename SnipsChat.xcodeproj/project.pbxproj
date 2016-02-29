@@ -23,6 +23,8 @@
 		7334B08B1C81CC59008FD097 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7334B08A1C81CC59008FD097 /* libxml2.tbd */; };
 		D9EE3C5F1C848616005F005B /* SCTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9EE3C5E1C848616005F005B /* SCTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		D9EE3C621C8487E6005F005B /* SCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9EE3C611C8487E6005F005B /* SCTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		D9EE3C651C8492CB005F005B /* SCHTMLParserHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D9EE3C641C8492CB005F005B /* SCHTMLParserHandler.m */; settings = {ASSET_TAGS = (); }; };
+		D9EE3C681C849359005F005B /* SCChatMessageParserSessionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D9EE3C671C849359005F005B /* SCChatMessageParserSessionHandler.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,10 @@
 		D9EE3C5E1C848616005F005B /* SCTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCTableViewCell.xib; sourceTree = "<group>"; };
 		D9EE3C601C8487E6005F005B /* SCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTableViewCell.h; sourceTree = "<group>"; };
 		D9EE3C611C8487E6005F005B /* SCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTableViewCell.m; sourceTree = "<group>"; };
+		D9EE3C631C8492CB005F005B /* SCHTMLParserHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCHTMLParserHandler.h; path = ChatMessages/SCHTMLParserHandler.h; sourceTree = "<group>"; };
+		D9EE3C641C8492CB005F005B /* SCHTMLParserHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCHTMLParserHandler.m; path = ChatMessages/SCHTMLParserHandler.m; sourceTree = "<group>"; };
+		D9EE3C661C849359005F005B /* SCChatMessageParserSessionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCChatMessageParserSessionHandler.h; sourceTree = "<group>"; };
+		D9EE3C671C849359005F005B /* SCChatMessageParserSessionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCChatMessageParserSessionHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +201,10 @@
 			children = (
 				7334B07E1C819106008FD097 /* SCChatMessageParser.h */,
 				7334B07F1C819106008FD097 /* SCChatMessageParser.m */,
+				D9EE3C661C849359005F005B /* SCChatMessageParserSessionHandler.h */,
+				D9EE3C671C849359005F005B /* SCChatMessageParserSessionHandler.m */,
+				D9EE3C631C8492CB005F005B /* SCHTMLParserHandler.h */,
+				D9EE3C641C8492CB005F005B /* SCHTMLParserHandler.m */,
 				7334B0811C819890008FD097 /* SCNetworkOperation.h */,
 				7334B0821C819890008FD097 /* SCNetworkOperation.m */,
 			);
@@ -334,11 +344,13 @@
 			files = (
 				7334B04C1C81589F008FD097 /* ViewController.m in Sources */,
 				7334B07D1C816CF9008FD097 /* SCChatMessage+Private.m in Sources */,
+				D9EE3C651C8492CB005F005B /* SCHTMLParserHandler.m in Sources */,
 				7334B07A1C8159AC008FD097 /* SCChatMessage.m in Sources */,
 				7334B0491C81589F008FD097 /* AppDelegate.m in Sources */,
 				7334B0871C81CB00008FD097 /* AXHTMLParser.m in Sources */,
 				7334B0801C819106008FD097 /* SCChatMessageParser.m in Sources */,
 				7334B0831C819890008FD097 /* SCNetworkOperation.m in Sources */,
+				D9EE3C681C849359005F005B /* SCChatMessageParserSessionHandler.m in Sources */,
 				D9EE3C621C8487E6005F005B /* SCTableViewCell.m in Sources */,
 				7334B0461C81589F008FD097 /* main.m in Sources */,
 			);

@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SCChatMessage+Private.h"
-
+#import "SCChatMessage.h"
 
 //Will be called again and again for each update from the network
 typedef void (^SCChatMessageParserBlock)(SCChatMessage * message,BOOL finished);
