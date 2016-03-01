@@ -13,6 +13,8 @@
 #define kSCLinkKey @"links"
 
 
+
+
 @implementation SCChatMessage
 
 -(instancetype) init
@@ -25,6 +27,10 @@
         __emoticons = [[NSMutableArray alloc] init];
         __links = [[NSMutableDictionary alloc] init];
         __finished = NO;
+        _jsonC = nil;
+        _menC = nil;
+        _emoC = nil;
+        _urlC = nil;
     }
     
     return self;
@@ -39,6 +45,9 @@
 {
     NSArray * rval;
     
+    if(_menC)
+        return _menC;
+    
     @synchronized(self) {
         rval = [__mentions allObjects];
     }
@@ -49,6 +58,9 @@
 -(NSArray *) emoticons
 {
     NSArray * rval;
+    
+    if(_emoC)
+        return _emoC;
     
     @synchronized(self) {
         rval = [NSArray arrayWithArray: __emoticons];
@@ -61,6 +73,9 @@
 -(NSArray *) links
 {
     NSMutableArray * rval = [[NSMutableArray alloc] init];
+    
+    if(_urlC)
+        return _urlC;
     
     @synchronized(self) {
         
@@ -75,6 +90,10 @@
 -(NSString *) jsonString
 {
     NSMutableDictionary * _localDict = [[NSMutableDictionary alloc] init];
+    
+    if(_jsonC)
+        return _jsonC;
+    
     
     //Perform Shallow-Deep copy, mentions and emoticons shallow and links deep as they may be changed during serialization
     

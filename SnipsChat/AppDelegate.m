@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [[SCChatMessageParser sharedParser] parse:@"aaaaaa" AndCallBlock:^(SCChatMessage * message,BOOL finished){
+    [[SCChatMessageParser sharedParser] parse:@"aaaaaa" AndCallBlockWithLink:^(SCChatMessage * message,BOOL finished){
         ;
     }];
     return YES;

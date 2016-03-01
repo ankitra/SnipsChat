@@ -23,11 +23,15 @@ typedef void (^SCChatMessageParserBlock)(SCChatMessage * message,BOOL finished);
 +(instancetype) sharedParser;
 
 
-//Parse locally only and do not fetch any items from the network. Will return parsed and unpopulated message.
--(SCChatMessage *) parse:(NSString *) chatString;
+/**
+ Parse locally only and do not fetch any items from the network. Will return parsed and unpopulated message.
+*/
+ -(SCChatMessage *) parse:(NSString *) chatString;
 
 
-//Parse chat message and populate titles from the network, call block when there is a update. Will return parsed and unpopulated message.
--(SCChatMessage *) parse:(NSString *) chatString AndCallBlock: (SCChatMessageParserBlock) block;
+/**
+Parse chat message and populate titles from the network, call block when there is a update. Will return parsed and unpopulated message.
+*/
+ -(SCChatMessage *) parse:(NSString *) chatString AndCallBlockWithLink: (SCChatMessageParserBlock) block;
 
 @end

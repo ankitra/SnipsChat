@@ -18,6 +18,14 @@
     NSMutableDictionary * __links;
     NSMutableArray * __emoticons;
     BOOL __finished;
+    
+    //When finished use these as there will be no changes
+    
+    NSString * _jsonC;
+    NSArray * _emoC;
+    NSArray * _menC;
+    NSArray * _urlC;
+
 }
 
 
