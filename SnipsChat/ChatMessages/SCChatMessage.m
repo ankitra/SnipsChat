@@ -31,6 +31,7 @@
         _menC = nil;
         _emoC = nil;
         _urlC = nil;
+        _errored = nil;
     }
     
     return self;
@@ -85,6 +86,20 @@
 
     return [NSArray arrayWithArray:rval];
 
+}
+
+-(BOOL) erroredWhileGettingLinks
+{
+    if(_errored)
+        return [_errored boolValue];
+    
+    BOOL errored = NO;
+    
+    for(NSDictionary * d in self.links)
+        if([[d[kSCLinkKey] class] isSubclassOfClass:[NSError class]])
+            errored = YES;
+    
+    return errored;
 }
 
 -(NSString *) jsonString

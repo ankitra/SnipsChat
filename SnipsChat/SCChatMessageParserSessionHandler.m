@@ -62,7 +62,12 @@
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
 didCompleteWithError:(nullable NSError *)error
 {
-    [[self operationFor:task] finish];
+    SCNetworkOperation * op = [self operationFor:task];
+    [op finish];
+    
+    if(error)
+        [op.chatMessage setTitle:error ForLink:op.textURL];
+    
     [self removeOperationFor:task];
 }
 

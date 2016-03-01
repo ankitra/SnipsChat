@@ -24,12 +24,15 @@
     [tableView cellForRowAtIndexPath:indexPath].selected = NO;
     NSString * text = ((SCTableViewCell *) [tableView cellForRowAtIndexPath:indexPath]).jsonView.text;
     
+    [tableView cellForRowAtIndexPath:indexPath].selected = NO;
+    
     SCJsonViewerViewController * jvc = [[SCJsonViewerViewController alloc] init];
     id i =jvc.view;
     jvc.jsonView.text = text;
     i = nil;
     self.navigationController.navigationBarHidden = NO;
     [self.navigationController pushViewController:jvc animated:YES];
+    
 }
 
 - (BOOL)shouldAutorotate
@@ -73,6 +76,26 @@
     return self.chatMessages.count;
 }
 
+-(void) fillCell:(SCTableViewCell *) cell WithMessage:(SCChatMessage *) msg
+{
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    if(!msg.finished)
+        [cell.progress startAnimating];
+    else
+        [cell.progress stopAnimating];
+    
+    cell.jsonView.text = msg.jsonString;
+    
+    if(msg.erroredWhileGettingLinks)
+       cell.backgroundColor = [UIColor colorWithRed:1.0 green:0.9 blue:0.9 alpha:1.0];
+    else
+        if(msg.finished)
+            cell.backgroundColor = [UIColor colorWithRed:0.9 green:1.0 blue:0.9 alpha:1.0];
+
+
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *scTableIdentifier = @"SCTableViewCell";
@@ -82,12 +105,8 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SCTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-
-    if(!self.chatMessages[self.chatMessages.count -1 - indexPath.row].finished)
-        [cell.progress startAnimating];
     
-    cell.jsonView.text = self.chatMessages[self.chatMessages.count -1 - indexPath.row].jsonString;
+    [self fillCell:cell WithMessage:self.chatMessages[self.chatMessages.count -1 - indexPath.row]];
     
     return cell;
 
@@ -101,16 +120,9 @@
     
     SCChatMessage * msg = [[SCChatMessageParser sharedParser] parse:textField.text AndCallBlockWithLink:^(SCChatMessage * m,BOOL finished)
     {
-
-
-        //        [self.jsonTable reloadData];
         NSIndexPath * path = [NSIndexPath indexPathForRow:self.chatMessages.count -1 -index inSection:0];
         SCTableViewCell *cell = (SCTableViewCell *)[self.jsonTable cellForRowAtIndexPath:path];
-        
-        if(finished)
-           [cell.progress stopAnimating];
-        
-        cell.jsonView.text = m.jsonString;
+        [self fillCell:cell WithMessage:m];
     }];
     
     [self.chatMessages addObject:msg];

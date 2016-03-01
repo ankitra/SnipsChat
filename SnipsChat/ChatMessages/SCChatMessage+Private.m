@@ -56,6 +56,8 @@
     //cache json string as well no changes will be made
     _jsonC = self.jsonString;
     
+    _errored = [NSNumber numberWithBool:self.erroredWhileGettingLinks];
+    
     //No need to these sets, array are better now as we do not have to search anymore we just have to enumerate at max;
     __mentions = nil;
     __emoticons = nil;

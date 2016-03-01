@@ -18,14 +18,14 @@
     NSMutableDictionary * __links;
     NSMutableArray * __emoticons;
     BOOL __finished;
-    
+
     //When finished use these as there will be no changes
     
     NSString * _jsonC;
     NSArray * _emoC;
     NSArray * _menC;
     NSArray * _urlC;
-
+    NSNumber * _errored;
 }
 
 
@@ -33,6 +33,11 @@
  No more loading is pending on this message
 */
  @property (readonly) BOOL finished;
+
+/**
+ Encountered error while getting links
+ */
+ @property (readonly) BOOL erroredWhileGettingLinks;
 
 /**
  Array of strings having emoticons
